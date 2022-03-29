@@ -1,0 +1,17 @@
+.searchbox{
+    margin: auto;
+}
+.searchbox input[type=text] {
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #095776;
+    width: 100%;
+    font-size: 17px;
+    font-family: 'Roboto';
+    color: #424242;
+    padding: 1px;
+}
+
+.searchbox input[type=text]:focus {
+    outline: none;
+}
