@@ -1,4 +1,3 @@
-import { observer } from 'mobx-react';
 import React from 'react'
 import store, { IContact } from '../../store/store';
 import './AddContact.css';
@@ -25,6 +24,4 @@ function AddContact() {
     )
 }
 
-const AddContactObserver = observer(AddContact);
-
-export default AddContactObserver;
+export default AddContact;

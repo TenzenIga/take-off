@@ -1,4 +1,3 @@
-import { observer } from 'mobx-react';
 import React from 'react'
 import store from '../../store/store';
 import './Header.css';
@@ -6,12 +5,10 @@ import './Header.css';
 function Header() {
     return (
         <header>
-            <div className="heading">Contact</div>
+            <div className="heading">Contacts</div>
             <button onClick={()=>store.logout()} className="logout">Выйти</button>
         </header>
     )
 }
 
-const HeaderObserver = observer(Header);
-
-export default HeaderObserver;
+export default Header;

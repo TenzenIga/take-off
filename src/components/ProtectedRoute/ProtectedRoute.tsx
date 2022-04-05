@@ -1,4 +1,4 @@
-import { observer } from "mobx-react";
+import { observer } from "mobx-react-lite";
 import { Navigate, useLocation } from "react-router-dom";
 import store from "../../store/store";
 

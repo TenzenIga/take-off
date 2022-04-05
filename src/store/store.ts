@@ -1,15 +1,16 @@
-import { makeAutoObservable } from "mobx";
-
+import { action, computed, makeAutoObservable, makeObservable, observable, runInAction } from "mobx";
 
 export interface IContact {
     id: number
     name: string
 }
 
+const URL = "http://localhost:4000";
 class Store {
     public isAuth: boolean = true;
 
-    public contacts: IContact[] = []
+    public contacts: IContact[] = [];
+
     constructor(){
         makeAutoObservable(this);
     }
@@ -22,9 +23,9 @@ class Store {
         this.isAuth = false;
     }
     public getContacts(): void {
-        fetch('http://localhost:3000/contacts').then(response => response.json())
+        fetch(`${URL}/contacts`).then(response => response.json())
         .then((res: IContact[]) =>{
-            this.contacts = res;
+            runInAction(()=> this.contacts = res)
         });
         
     }

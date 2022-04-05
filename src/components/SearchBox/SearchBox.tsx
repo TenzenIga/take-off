@@ -1,4 +1,3 @@
-import { observer } from 'mobx-react';
 import store from '../../store/store';
 
 import './SearchBox.css';
@@ -6,9 +5,9 @@ import './SearchBox.css';
 function SearchBox() {
   const handleSearch = (value: string)=>{
     if(value){
-        store.filterData(value)
+        store.filterData(value);
     }else{
-        store.getContacts()
+        store.getContacts();
     }
   }
   return (
@@ -18,6 +17,4 @@ function SearchBox() {
   )
 }
 
-const SearchBoxObserver = observer(SearchBox)
-
-export default SearchBoxObserver;
+export default SearchBox;

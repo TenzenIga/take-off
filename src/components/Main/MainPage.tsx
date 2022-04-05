@@ -1,5 +1,6 @@
-import { observer } from 'mobx-react';
+import { observer } from 'mobx-react-lite';
 import React, { useEffect } from 'react'
+
 import store, { IContact } from '../../store/store';
 import AddContactObserver from '../AddContact/AddContact';
 import Contact from '../Contact/Contact';
