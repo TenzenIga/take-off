@@ -7,7 +7,7 @@ export interface IContact {
 
 const URL = "http://localhost:4000";
 class Store {
-    public isAuth: boolean = true;
+    public isAuth: boolean = false;
 
     public contacts: IContact[] = [];
 
